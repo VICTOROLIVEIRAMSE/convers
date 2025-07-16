@@ -329,6 +329,9 @@
                 <li><a href="#energia" class="nav-link"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M19 3v4M3 10h18M5 14h14M5 18h14M3 22h18"></path></svg>Energia</a></li>
                 <li><a href="#densidade" class="nav-link"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 4v0a2 2 0 012-2h2a2 2 0 012 2v0m-6 8v0a2 2 0 012-2h2a2 2 0 012 2v0m-6 8v0a2 2 0 012-2h2a2 2 0 012 2v0M9 4h6v16H9V4z"></path></svg>Densidade</a></li>
                 <li><a href="#vazao" class="nav-link"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>Vazão</a></li>
+                <li><a href="#frequencia" class="nav-link"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12h-4M4 12H0M12 20v-4M12 4V0M8 16l-2-2M16 8l2-2M8 8l-2 2M16 16l2 2"></path></svg>Frequência</a></li>
+                <li><a href="#dados" class="nav-link"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path></svg>Dados</a></li>
+                <li><a href="#combustivel" class="nav-link"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 6v10h12V12l3-6H3zm14 4h-4m-4 0H5"></path></svg>Combustível</a></li>
                 <li><a href="#rugosidade" class="nav-link"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h2M19 12h2M6 6l-2 2M18 6l2 2M6 18l-2-2M18 18l2-2"></path></svg>Rugosidade</a></li>
                 <li><a href="#angulo" class="nav-link"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>Ângulo</a></li>
             </ul>
@@ -365,86 +368,106 @@
                 comprimento: { title: 'Comprimento', conversions: [
                     { title: 'Milímetro (mm) ↔ Polegada (in)', units: ['mm', 'inch-dec'], special: 'fractional' },
                     { title: 'Metro (m) ↔ Pé (ft)', units: ['m', 'ft'] },
-                    { title: 'Quilômetro (km) ↔ Milha (mi)', units: ['km', 'mi'] }
+                    { title: 'Metro (m) ↔ Jarda (yd)', units: ['m_2', 'yd'] },
+                    { title: 'Quilômetro (km) ↔ Milha (mi)', units: ['km', 'mi'] },
+                    { title: 'Quilômetro (km) ↔ Milha Náutica (nmi)', units: ['km_2', 'nmi'] }
                 ]},
                 temperatura: { title: 'Temperatura', conversions: [
                     { title: 'Celsius (°C) ↔ Fahrenheit (°F) ↔ Kelvin (K)', units: ['celsius', 'fahrenheit', 'kelvin'], type: 'temperature' }
                 ]},
                 area: { title: 'Área', conversions: [
                     { title: 'Metro Quadrado (m²) ↔ Pé Quadrado (ft²)', units: ['m2', 'ft2'] },
+                    { title: 'Centímetro Quadrado (cm²) ↔ Polegada Quadrada (in²)', units: ['cm2', 'in2'] },
                     { title: 'Hectare (ha) ↔ Acre (acre)', units: ['ha', 'acre'] }
                 ]},
                 volume: { title: 'Volume', conversions: [
                     { title: 'Litro (L) ↔ Galão Americano (gal)', units: ['l', 'gal'] },
-                    { title: 'Metro Cúbico (m³) ↔ Pé Cúbico (ft³)', units: ['m3', 'ft3'] }
+                    { title: 'Metro Cúbico (m³) ↔ Pé Cúbico (ft³)', units: ['m3', 'ft3'] },
+                    { title: 'Mililitro (ml) ↔ Onça Líquida (fl oz)', units: ['ml', 'floz'] }
                 ]},
                 massa: { title: 'Massa', conversions: [
                     { title: 'Quilograma (kg) ↔ Libra (lb)', units: ['kg', 'lb'] },
-                    { title: 'Grama (g) ↔ Onça (oz)', units: ['g', 'oz'] }
+                    { title: 'Grama (g) ↔ Onça (oz)', units: ['g', 'oz'] },
+                    { title: 'Tonelada Métrica (t) ↔ Tonelada Curta (ton)', units: ['tonne', 'short_ton'] }
                 ]},
                 forca: { title: 'Força', conversions: [
                     { title: 'Newton (N) ↔ Libra-força (lbf)', units: ['n', 'lbf'] },
-                    { title: 'Quilonewton (kN) ↔ Kip (kilopound-force)', units: ['kn', 'kip'] }
+                    { title: 'Quilonewton (kN) ↔ Kip (kilopound-force)', units: ['kn', 'kip'] },
+                    { title: 'Newton (N) ↔ Quilograma-força (kgf)', units: ['n_2', 'kgf'] }
                 ]},
                 pressao: { title: 'Pressão', conversions: [
-                    { title: 'Quilopascal (kPa) ↔ PSI (lbf/in²)', units: ['kpa', 'psi'] },
+                    { title: 'Pascal (Pa) ↔ PSI (lbf/in²)', units: ['pa', 'psi'] },
                     { title: 'Megapascal (MPa) ↔ Kip por Polegada² (ksi)', units: ['mpa', 'ksi'] },
-                    { title: 'Bar ↔ Atmosfera (atm)', units: ['bar', 'atm'] }
+                    { title: 'Bar ↔ Atmosfera (atm)', units: ['bar', 'atm'] },
+                    { title: 'Pascal (Pa) ↔ Torr', units: ['pa_2', 'torr'] }
                 ]},
                 velocidade: { title: 'Velocidade', conversions: [
                     { title: 'Metros por segundo (m/s) ↔ Pés por segundo (ft/s)', units: ['mps', 'ftps'] },
-                    { title: 'Quilômetros por hora (km/h) ↔ Milhas por hora (mph)', units: ['kmh', 'mph'] }
+                    { title: 'Quilômetros por hora (km/h) ↔ Milhas por hora (mph)', units: ['kmh', 'mph'] },
+                    { title: 'Quilômetros por hora (km/h) ↔ Nó (knot)', units: ['kmh_2', 'knot'] }
                 ]},
                 torque: { title: 'Torque', conversions: [
                     { title: 'Newton-metro (N·m) ↔ Libra-força-pé (lbf·ft)', units: ['nm', 'lbfft'] }
                 ]},
                 potencia: { title: 'Potência', conversions: [
-                    { title: 'Quilowatt (kW) ↔ Horsepower (hp)', units: ['kw', 'hp'] }
+                    { title: 'Watt (W) ↔ Horsepower (hp)', units: ['w', 'hp'] },
+                    { title: 'Quilowatt (kW) ↔ BTU/hora', units: ['kw', 'btu_h'] }
                 ]},
                 energia: { title: 'Energia', conversions: [
-                    { title: 'Joule (J) ↔ British Thermal Unit (BTU)', units: ['j', 'btu'] }
+                    { title: 'Joule (J) ↔ British Thermal Unit (BTU)', units: ['j', 'btu'] },
+                    { title: 'Quilowatt-hora (kWh) ↔ Megajoule (MJ)', units: ['kwh', 'mj'] },
+                    { title: 'Joule (J) ↔ Caloria (cal)', units: ['j_2', 'cal'] }
                 ]},
                 densidade: { title: 'Densidade', conversions: [
-                    { title: 'kg/m³ ↔ lb/ft³', units: ['kgm3', 'lbft3'] }
+                    { title: 'kg/m³ ↔ lb/ft³', units: ['kgm3', 'lbft3'] },
+                    { title: 'g/cm³ ↔ lb/gal', units: ['gcm3', 'lbgal'] }
                 ]},
                 vazao: { title: 'Vazão', conversions: [
                     { title: 'Litros por segundo (L/s) ↔ Galões por minuto (GPM)', units: ['lps', 'gpm'] },
                     { title: 'Metros cúbicos por hora (m³/h) ↔ Pés cúbicos por minuto (CFM)', units: ['m3h', 'cfm'] },
                     { title: 'Metros cúbicos por segundo (m³/s) ↔ Litros por segundo (L/s)', units: ['m3s', 'lps_2'] }
                 ]},
+                frequencia: { title: 'Frequência', conversions: [
+                    { title: 'Hertz (Hz) ↔ Rotações por minuto (RPM)', units: ['hz', 'rpm'] }
+                ]},
+                dados: { title: 'Armazenamento de Dados', conversions: [
+                    { title: 'Megabyte (MB) ↔ Gigabyte (GB)', units: ['mb', 'gb'] },
+                    { title: 'Gigabyte (GB) ↔ Terabyte (TB)', units: ['gb_2', 'tb'] }
+                ]},
+                combustivel: { title: 'Consumo de Combustível', conversions: [
+                    { title: 'km/L ↔ Milhas por Galão (MPG)', units: ['kml', 'mpg'] },
+                    { title: 'L/100km ↔ Milhas por Galão (MPG)', units: ['l100km', 'mpg_2'], type: 'inverse' }
+                ]},
                 rugosidade: { title: 'Rugosidade de Tubulação', calculators: [
                     { title: 'Rugosidade Absoluta (k) por Material', type: 'roughness', materials: {
-                        'Aço Rebitado Novo': 1.5,
-                        'Concreto': 1.0,
-                        'Madeira': 0.5,
-                        'Ferro Fundido': 0.26,
-                        'Aço Galvanizado': 0.15,
-                        'Aço Comercial ou Soldado': 0.046,
-                        'Ferro Forjado': 0.046,
-                        'Tubo Puxado (Aço, Latão, Cobre)': 0.0015,
-                        'PVC e Vidro': 0.0015
+                        'Aço Rebitado Novo': 1.5, 'Concreto': 1.0, 'Madeira': 0.5, 'Ferro Fundido': 0.26, 'Aço Galvanizado': 0.15,
+                        'Aço Comercial ou Soldado': 0.046, 'Ferro Forjado': 0.046, 'Tubo Puxado (Aço, Latão, Cobre)': 0.0015, 'PVC e Vidro': 0.0015
                     }}
                 ]},
-                angulo: { title: 'Ângulo e Inclinação', conversions: [
-                    { title: 'Inclinação (%) ↔ Ângulo (°)', units: ['percent', 'deg'], type: 'angle' }
+                angulo: { title: 'Ângulo', conversions: [
+                    { title: 'Grau (°) ↔ Radiano (rad)', units: ['deg', 'rad'] },
+                    { title: 'Inclinação (%) ↔ Ângulo (°)', units: ['percent', 'deg_2'], type: 'angle' }
                 ]}
             };
 
             const unitLabels = {
-                'mm': 'Milímetros (mm)', 'inch-dec': 'Polegadas (in)', 'm': 'Metros (m)', 'ft': 'Pés (ft)', 'km': 'Quilômetros (km)', 'mi': 'Milhas (mi)',
+                'mm': 'Milímetros (mm)', 'inch-dec': 'Polegadas (in)', 'm': 'Metros (m)', 'ft': 'Pés (ft)', 'km': 'Quilômetros (km)', 'mi': 'Milhas (mi)', 'm_2': 'Metros (m)', 'yd': 'Jardas (yd)', 'km_2': 'Quilômetros (km)', 'nmi': 'Milhas Náuticas (nmi)',
                 'celsius': 'Celsius (°C)', 'fahrenheit': 'Fahrenheit (°F)', 'kelvin': 'Kelvin (K)',
-                'm2': 'm²', 'ft2': 'ft²', 'ha': 'Hectares (ha)', 'acre': 'Acres',
-                'l': 'Litros (L)', 'gal': 'Galões (gal)', 'm3': 'm³', 'ft3': 'ft³',
-                'kg': 'Quilogramas (kg)', 'lb': 'Libras (lb)', 'g': 'Gramas (g)', 'oz': 'Onças (oz)',
-                'n': 'Newtons (N)', 'lbf': 'Libras-força (lbf)', 'kn': 'Quilonewtons (kN)', 'kip': 'Kips',
-                'kpa': 'Quilopascals (kPa)', 'psi': 'PSI (lbf/in²)', 'mpa': 'Megapascals (MPa)', 'ksi': 'Kip/in² (ksi)', 'bar': 'Bar', 'atm': 'Atmosferas (atm)',
-                'mps': 'm/s', 'ftps': 'ft/s', 'kmh': 'km/h', 'mph': 'mph',
+                'm2': 'm²', 'ft2': 'ft²', 'ha': 'Hectares (ha)', 'acre': 'Acres', 'cm2': 'cm²', 'in2': 'in²',
+                'l': 'Litros (L)', 'gal': 'Galões (gal)', 'm3': 'm³', 'ft3': 'ft³', 'ml': 'Mililitros (ml)', 'floz': 'Onças Líquidas (fl oz)',
+                'kg': 'Quilogramas (kg)', 'lb': 'Libras (lb)', 'g': 'Gramas (g)', 'oz': 'Onças (oz)', 'tonne': 'Toneladas (t)', 'short_ton': 'Toneladas Curtas (ton)',
+                'n': 'Newtons (N)', 'lbf': 'Libras-força (lbf)', 'kn': 'Quilonewtons (kN)', 'kip': 'Kips', 'n_2': 'Newtons (N)', 'kgf': 'Quilograma-força (kgf)',
+                'pa': 'Pascal (Pa)', 'psi': 'PSI (lbf/in²)', 'mpa': 'Megapascals (MPa)', 'ksi': 'Kip/in² (ksi)', 'bar': 'Bar', 'atm': 'Atmosferas (atm)', 'pa_2': 'Pascal (Pa)', 'torr': 'Torr',
+                'mps': 'm/s', 'ftps': 'ft/s', 'kmh': 'km/h', 'mph': 'mph', 'kmh_2': 'km/h', 'knot': 'Nós (knot)',
                 'nm': 'N·m', 'lbfft': 'lbf·ft',
-                'kw': 'Quilowatts (kW)', 'hp': 'Horsepower (hp)',
-                'j': 'Joules (J)', 'btu': 'BTUs',
-                'kgm3': 'kg/m³', 'lbft3': 'lb/ft³',
+                'w': 'Watt (W)', 'hp': 'Horsepower (hp)', 'kw': 'Quilowatts (kW)', 'btu_h': 'BTU/h',
+                'j': 'Joules (J)', 'btu': 'BTUs', 'kwh': 'kWh', 'mj': 'MJ', 'j_2': 'Joules (J)', 'cal': 'Calorias (cal)',
+                'kgm3': 'kg/m³', 'lbft3': 'lb/ft³', 'gcm3': 'g/cm³', 'lbgal': 'lb/gal',
                 'lps': 'L/s', 'gpm': 'GPM', 'm3h': 'm³/h', 'cfm': 'CFM', 'm3s': 'm³/s', 'lps_2': 'L/s',
-                'percent': 'Inclinação (%)', 'deg': 'Ângulo (°)'
+                'hz': 'Hertz (Hz)', 'rpm': 'RPM',
+                'mb': 'Megabytes (MB)', 'gb': 'Gigabytes (GB)', 'gb_2': 'Gigabytes (GB)', 'tb': 'Terabytes (TB)',
+                'kml': 'km/L', 'mpg': 'MPG', 'l100km': 'L/100km', 'mpg_2': 'MPG',
+                'percent': 'Inclinação (%)', 'deg': 'Graus (°)', 'rad': 'Radianos (rad)', 'deg_2': 'Graus (°)'
             };
 
             // --- HTML Generation ---
@@ -560,27 +583,44 @@
         const factors = {
             'mm': { factor: 1 / 25.4 }, 'inch-dec': { factor: 25.4 },
             'm': { factor: 3.28084 }, 'ft': { factor: 1 / 3.28084 },
+            'm_2': { factor: 1.09361 }, 'yd': { factor: 1 / 1.09361 },
             'km': { factor: 0.621371 }, 'mi': { factor: 1.60934 },
+            'km_2': { factor: 0.539957 }, 'nmi': { factor: 1 / 0.539957 },
             'm2': { factor: 10.7639 }, 'ft2': { factor: 1 / 10.7639 },
+            'cm2': { factor: 0.155 }, 'in2': { factor: 1 / 0.155 },
             'ha': { factor: 2.47105 }, 'acre': { factor: 1 / 2.47105 },
             'l': { factor: 0.264172 }, 'gal': { factor: 3.78541 },
             'm3': { factor: 35.3147 }, 'ft3': { factor: 1 / 35.3147 },
+            'ml': { factor: 0.033814 }, 'floz': { factor: 1 / 0.033814 },
             'kg': { factor: 2.20462 }, 'lb': { factor: 1 / 2.20462 },
             'g': { factor: 0.035274 }, 'oz': { factor: 1 / 0.035274 },
+            'tonne': { factor: 1.10231 }, 'short_ton': { factor: 1 / 1.10231 },
             'n': { factor: 0.224809 }, 'lbf': { factor: 4.44822 },
             'kn': { factor: 0.224809 }, 'kip': { factor: 4.44822 },
-            'kpa': { factor: 0.145038 }, 'psi': { factor: 6.89476 },
+            'n_2': { factor: 0.101972 }, 'kgf': { factor: 1 / 0.101972 },
+            'pa': { factor: 0.000145038 }, 'psi': { factor: 1 / 0.000145038 },
             'mpa': { factor: 0.145038 }, 'ksi': { factor: 6.89476 },
             'bar': { factor: 0.986923 }, 'atm': { factor: 1.01325 },
+            'pa_2': { factor: 0.00750062 }, 'torr': { factor: 1 / 0.00750062 },
             'mps': { factor: 3.28084 }, 'ftps': { factor: 1 / 3.28084 },
             'kmh': { factor: 0.621371 }, 'mph': { factor: 1.60934 },
+            'kmh_2': { factor: 0.539957 }, 'knot': { factor: 1 / 0.539957 },
             'nm': { factor: 0.737562 }, 'lbfft': { factor: 1.35582 },
-            'kw': { factor: 1.34102 }, 'hp': { factor: 0.7457 },
+            'w': { factor: 0.00134102 }, 'hp': { factor: 1 / 0.00134102 },
+            'kw': { factor: 3412.14 }, 'btu_h': { factor: 1 / 3412.14 },
             'j': { factor: 0.000947817 }, 'btu': { factor: 1055.06 },
+            'kwh': { factor: 3.6 }, 'mj': { factor: 1 / 3.6 },
+            'j_2': { factor: 0.239006 }, 'cal': { factor: 1 / 0.239006 },
             'kgm3': { factor: 0.062428 }, 'lbft3': { factor: 16.0185 },
+            'gcm3': { factor: 8.3454 }, 'lbgal': { factor: 1 / 8.3454 },
             'lps': { factor: 15.8503 }, 'gpm': { factor: 1 / 15.8503 },
             'm3h': { factor: 0.588578 }, 'cfm': { factor: 1 / 0.588578 },
-            'm3s': { factor: 1000 }, 'lps_2': { factor: 1 / 1000 }
+            'm3s': { factor: 1000 }, 'lps_2': { factor: 1 / 1000 },
+            'hz': { factor: 60 }, 'rpm': { factor: 1 / 60 },
+            'mb': { factor: 1 / 1024 }, 'gb': { factor: 1024 },
+            'gb_2': { factor: 1 / 1024 }, 'tb': { factor: 1024 },
+            'kml': { factor: 2.35215 }, 'mpg': { factor: 1 / 2.35215 },
+            'deg': { factor: Math.PI / 180 }, 'rad': { factor: 180 / Math.PI }
         };
 
         function gcd(a, b) { return b ? gcd(b, a % b) : a; }
@@ -642,17 +682,20 @@
                 if (document.getElementById('fahrenheit').id !== id) document.getElementById('fahrenheit').value = f.toPrecision(6);
                 if (document.getElementById('kelvin').id !== id) document.getElementById('kelvin').value = k.toPrecision(6);
             } else if (conversionType === 'angle') {
-                if (id === 'percent') document.getElementById('deg').value = (Math.atan(val / 100) * (180 / Math.PI)).toPrecision(6);
+                if (id === 'percent') document.getElementById('deg_2').value = (Math.atan(val / 100) * (180 / Math.PI)).toPrecision(6);
                 else document.getElementById('percent').value = (Math.tan(val * Math.PI / 180) * 100).toPrecision(6);
+            } else if (conversionType === 'inverse') {
+                 const row = document.getElementById(id).closest('.conversion-row');
+                 const allInputs = row.querySelectorAll('input[type="number"]');
+                 let targetId;
+                 allInputs.forEach(input => { if (input.id !== id) targetId = input.id; });
+                 if (id === 'l100km') document.getElementById(targetId).value = (235.215 / val).toPrecision(6);
+                 else document.getElementById(targetId).value = (235.215 / val).toPrecision(6);
             } else { // Standard conversion
                 const row = document.getElementById(id).closest('.conversion-row');
                 const allInputs = row.querySelectorAll('input[type="number"]');
                 let targetId;
-                allInputs.forEach(input => {
-                    if (input.id !== id) {
-                        targetId = input.id;
-                    }
-                });
+                allInputs.forEach(input => { if (input.id !== id) targetId = input.id; });
 
                 if (targetId && factors[id]) {
                     const factor = factors[id].factor;
